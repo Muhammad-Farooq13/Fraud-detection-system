@@ -1,0 +1,25 @@
+data:
+  n_transactions: 250000
+  n_customers: 8000
+  fraud_rate: 0.0172
+  random_seed: 42
+  raw_path: data/raw/transactions.csv
+  processed_path: data/processed/features.parquet
+
+training:
+  train_frac: 0.70
+  val_frac: 0.15
+  test_frac: 0.15
+  mlflow_tracking_uri: sqlite:///mlruns.db
+  experiment_name: fraud-detection
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  model_dir: models_store
+
+risk_thresholds:
+  low: 0.0
+  medium: 0.15
+  high: 0.40
+  critical: 0.75

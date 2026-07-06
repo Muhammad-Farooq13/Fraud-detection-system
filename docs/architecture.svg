@@ -1,0 +1,60 @@
+<svg width="680" height="460" viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Fraud detection platform architecture</title>
+<desc>Data flows from synthetic generation through EDA, feature engineering, model training with MLflow tracking, into a FastAPI serving layer wrapped in Docker, monitored by GitHub Actions CI/CD.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5f5e5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#2c2c2a;}
+.th{font-size:14px;font-weight:600;}
+.ts{font-size:12px;fill:#5f5e5a;}
+.box{fill:#f1efe8;stroke:#888780;stroke-width:0.5;}
+.teal{fill:#e1f5ee;stroke:#0f6e56;stroke-width:0.5;}
+.purple{fill:#eeedfe;stroke:#534ab7;stroke-width:0.5;}
+.coral{fill:#faece7;stroke:#993c1d;stroke-width:0.5;}
+.arr{stroke:#5f5e5a;stroke-width:1.2;fill:none;}
+</style>
+
+<rect x="40" y="40" width="150" height="56" rx="8" class="box"/>
+<text x="115" y="64" text-anchor="middle" class="th">Data generation</text>
+<text x="115" y="82" text-anchor="middle" class="ts">Synthetic transactions</text>
+
+<rect x="265" y="40" width="150" height="56" rx="8" class="teal"/>
+<text x="340" y="64" text-anchor="middle" class="th">EDA</text>
+<text x="340" y="82" text-anchor="middle" class="ts">Report + charts</text>
+
+<rect x="490" y="40" width="150" height="56" rx="8" class="teal"/>
+<text x="565" y="64" text-anchor="middle" class="th">Feature engineering</text>
+<text x="565" y="82" text-anchor="middle" class="ts">Leakage-safe features</text>
+
+<line x1="190" y1="68" x2="263" y2="68" class="arr" marker-end="url(#arrow)"/>
+<line x1="415" y1="68" x2="488" y2="68" class="arr" marker-end="url(#arrow)"/>
+<line x1="565" y1="96" x2="565" y2="150" class="arr" marker-end="url(#arrow)"/>
+
+<rect x="415" y="150" width="225" height="56" rx="8" class="purple"/>
+<text x="527" y="174" text-anchor="middle" class="th">Model training</text>
+<text x="527" y="192" text-anchor="middle" class="ts">LogReg vs Gradient Boosting</text>
+
+<rect x="130" y="150" width="225" height="56" rx="8" class="box"/>
+<text x="242" y="174" text-anchor="middle" class="th">MLflow tracking</text>
+<text x="242" y="192" text-anchor="middle" class="ts">Params, metrics, artifacts</text>
+
+<line x1="413" y1="178" x2="357" y2="178" class="arr" marker-end="url(#arrow)"/>
+<line x1="527" y1="206" x2="527" y2="260" class="arr" marker-end="url(#arrow)"/>
+
+<rect x="415" y="260" width="225" height="56" rx="8" class="coral"/>
+<text x="527" y="284" text-anchor="middle" class="th">FastAPI service</text>
+<text x="527" y="302" text-anchor="middle" class="ts">/predict, /health, /model-info</text>
+
+<line x1="527" y1="316" x2="527" y2="370" class="arr" marker-end="url(#arrow)"/>
+
+<rect x="415" y="370" width="225" height="56" rx="8" class="box"/>
+<text x="527" y="394" text-anchor="middle" class="th">Docker container</text>
+<text x="527" y="412" text-anchor="middle" class="ts">Non-root, health-checked</text>
+
+<rect x="40" y="370" width="330" height="56" rx="8" class="box"/>
+<text x="205" y="394" text-anchor="middle" class="th">GitHub Actions CI</text>
+<text x="205" y="412" text-anchor="middle" class="ts">Lint, test, coverage, image build</text>
+
+<line x1="370" y1="398" x2="413" y2="398" class="arr" marker-end="url(#arrow)"/>
+</svg>

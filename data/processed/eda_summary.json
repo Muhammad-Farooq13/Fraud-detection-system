@@ -1,0 +1,31 @@
+{
+  "n_rows": 100000,
+  "n_columns": 13,
+  "n_missing_values": 0,
+  "fraud_rate_pct": 1.72,
+  "n_fraud": 1720,
+  "n_legit": 98280,
+  "amount_stats": {
+    "overall_mean": 47.07,
+    "fraud_mean": 95.9,
+    "legit_mean": 46.22,
+    "overall_median": 25.62
+  },
+  "night_txn_fraud_rate_pct": 7.959,
+  "day_txn_fraud_rate_pct": 1.257,
+  "foreign_txn_fraud_rate_pct": 13.375,
+  "domestic_txn_fraud_rate_pct": 1.216,
+  "fraud_rate_by_merchant_category": {
+    "cash_advance": 10.387,
+    "crypto_exchange": 7.558,
+    "jewelry": 2.581,
+    "electronics": 2.288,
+    "travel": 2.154,
+    "online_retail": 2.037,
+    "restaurant": 1.624,
+    "gas_station": 1.453,
+    "grocery": 1.449,
+    "entertainment": 1.413
+  },
+  "duplicate_transaction_ids": 0
+}
